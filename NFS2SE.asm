@@ -1,5 +1,7 @@
 [BITS 32]
 
+global binaryGameVersion
+
 global start
 global sub_41B250
 
@@ -15,8 +17,8 @@ extern SDL_NumJoysticks_wrap
 extern SDL_GetTicks_wrap
 extern SDL_Delay_wrap
 
+extern iSNDdirectsetfunctions_wrap
 extern iSNDdllversion_
-extern iSNDdirectsetfunctions_
 extern iSNDdirectcaps_
 extern iSNDdirectstart_
 extern iSNDdirectserve_
@@ -179379,13 +179381,13 @@ loc_48872A:
 	jmp loc_488718_end
 
 loc_488718_sndsetfunc:
-	mov ecx, sub_4A5170
-	mov eax, sub_4A7CBC
-	xor edx, edx
-	xor ebx, ebx
-	push edx
-	call iSNDdirectsetfunctions_
-
+	xor eax, eax
+	push eax
+	push sub_4A5170
+	push eax
+	push eax
+	push sub_4A7CBC
+	call iSNDdirectsetfunctions_wrap
 	xor eax, eax
 
 loc_488718_end:
@@ -232014,6 +232016,8 @@ dword_4C4EA0: dd 18h, 10h, 1, 50h, 2Ch
 	dd off_4C4BE0
 
 section .data
+
+binaryGameVersion: db '1.0.2',0
 
 aDbar: db 'dbar',0
 aDlog: db 'dlog',0
