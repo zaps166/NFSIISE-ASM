@@ -232017,7 +232017,7 @@ dword_4C4EA0: dd 18h, 10h, 1, 50h, 2Ch
 
 section .data
 
-binaryGameVersion: db '1.0.2',0
+binaryGameVersion: db '1.1.0',0
 
 aDbar: db 'dbar',0
 aDlog: db 'dlog',0
