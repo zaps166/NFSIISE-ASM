@@ -47608,7 +47608,7 @@ loc_425EDF:
 	pop edx
 	pop ecx
 	pop ebx
-	retn
+	ret
 
 loc_425F00:
 	xor ebx, ebx
@@ -47701,7 +47701,7 @@ loc_425F73:
 	pop edx
 	pop ecx
 	pop ebx
-	retn
+	ret
 ;sub_425DD0 endp
 
 sub_425F90: ;SUBROUTINE
@@ -179609,6 +179609,7 @@ sub_488B24: ;SUBROUTINE
 	cmp byte [byte_4DDA74], 0
 	jnz sub_488ADC
 	lea eax, [eax+0]
+	jmp sub_488B30
 ;sub_488B24 endp
 
 sub_488B30: ;SUBROUTINE
@@ -181518,6 +181519,7 @@ sub_48A026: ;SUBROUTINE
 	shl eax, 10h
 	or ebx, eax
 	pop eax
+	jmp sub_48A031
 ;sub_48A026 endp
 
 sub_48A031: ;SUBROUTINE
@@ -196463,6 +196465,7 @@ loc_4975C7:
 	test edx, edx
 	jnz loc_4975C7
 	mov eax, eax
+	jmp sub_4975E0
 ;sub_4975B0 endp
 
 sub_4975E0: ;SUBROUTINE
@@ -205738,6 +205741,7 @@ loc_4A14C5:
 
 sub_4A14D4: ;SUBROUTINE
 	xchg eax, edx
+	jmp sub_4A14D5
 ;sub_4A14D4 endp
 
 sub_4A14D5: ;SUBROUTINE
@@ -207662,6 +207666,7 @@ locret_4A5136:
 
 loc_4A5137:
 	call sub_4A5068
+	jmp sub_4A513C
 ;sub_4A5124 endp
 
 sub_4A513C: ;SUBROUTINE
@@ -214242,7 +214247,6 @@ loc_4ACA0D:
 __STOSB: ;SUBROUTINE
 	or ecx, ecx
 	jz locret_4ACB00
-	cmp [eax], dl
 
 loc_4ACAD6:
 	test al, 3
@@ -214300,7 +214304,6 @@ loc_4ACB20:
 	mov [eax+8], edx
 	mov [eax+0Ch], edx
 	jz loc_4ACB46
-	cmp [eax+20h], dl
 	mov [eax+10h], edx
 	mov [eax+14h], edx
 	dec ecx
@@ -218372,7 +218375,8 @@ runWindowThread:
 	mov byte [canRunWindowThread], 0
 	jmp theLoop
 %else
-	; Directly go to the "doStart" function
+	;Jump to the "doStart" function
+	jmp doStart
 %endif
 ;start endp
 
@@ -232017,7 +232021,7 @@ dword_4C4EA0: dd 18h, 10h, 1, 50h, 2Ch
 
 section .data
 
-binaryGameVersion: db '1.1.0',0
+binaryGameVersion: db '1.1.1',0
 
 aDbar: db 'dbar',0
 aDlog: db 'dlog',0
