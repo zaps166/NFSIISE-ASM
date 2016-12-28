@@ -6599,7 +6599,6 @@ loc_4059CC:
 	call sub_482030
 	and eax, 0FFFFh
 	jnz loc_4059CC
-	lea eax, [eax+0]
 
 loc_4059E0:
 	mov eax, edx
@@ -7219,7 +7218,6 @@ loc_405FB3:
 
 loc_40607C:
 	mov ecx, eax
-	mov eax, eax
 
 loc_406080:
 	mov al, byte [byte_512DA9]
@@ -9047,7 +9045,6 @@ loc_407754:
 	idiv ecx
 	cmp byte byte_4E551A[edx], 0
 	jnz loc_407754
-	lea eax, [eax+0]
 
 loc_407768:
 	mov bh, 1
@@ -21878,7 +21875,6 @@ loc_4114FE:
 	mov eax, [esi+34h]
 	test byte [eax+8], 1
 	jz loc_4116BB
-	lea eax, [eax+0]
 
 loc_411528:
 	pop edi
@@ -22843,7 +22839,6 @@ loc_4122DA:
 	mov [edx-1], bl
 	cmp eax, esi
 	jl loc_4122DA
-	mov eax, eax
 
 loc_4122E8:
 	mov byte [edx], 0
@@ -28669,7 +28664,6 @@ loc_4169DB:
 	mov [esp+4F04h], bx
 	cmp ax, 9
 	jl loc_4169DB
-	lea eax, [eax+0]
 
 loc_416A04:
 	mov esi, [esp+4EE4h]
@@ -33719,7 +33713,6 @@ loc_41B33B:
 	mov [ecx-4], ebx
 	cmp edi, esi
 	jl loc_41B33B
-	mov eax, eax
 
 loc_41B354:
 	cmp dword [esp+0Ch], 1
@@ -37332,7 +37325,6 @@ sub_41DF40: ;SUBROUTINE
 	mov ebx, eax
 	cmp byte [eax+43h], 0
 	jnz loc_41DF63
-	mov eax, eax
 
 loc_41DF4C:
 	mov edx, [ebx+18h]
@@ -41361,7 +41353,6 @@ loc_42176C:
 	inc dword [esp+4]
 	cmp byte [esp+4], 10h
 	jl loc_42176C
-	lea eax, [eax+0]
 
 loc_421788:
 	mov eax, 1
@@ -43542,7 +43533,6 @@ loc_422DE1:
 	call dword [esi+2Ch]
 	cmp ebx, dword [dword_4D4C60]
 	jl loc_422DE1
-	mov eax, eax
 
 loc_422DFC:
 	mov ecx, esp
@@ -43667,7 +43657,6 @@ loc_422EFA:
 	call sub_422EF0
 	cmp ecx, 10h
 	jl loc_422EFA
-	lea eax, [eax+0]
 
 loc_422F14:
 	pop esi
@@ -47401,7 +47390,6 @@ loc_425BB0:
 	mov [esp+0D4h], cx
 	test cx, cx
 	jg loc_425BB0
-	lea eax, [eax+0]
 
 loc_425CA8:
 	mov eax, edi
@@ -47543,7 +47531,6 @@ loc_425E1A:
 	mov [esp+eax+10h], edx
 	cmp bx, 1C2h
 	jl loc_425E1A
-	mov eax, eax
 
 loc_425E44:
 	test ecx, ecx
@@ -53406,7 +53393,6 @@ loc_42A3D8:
 	mov ebx, [ebx]
 	test ebx, ebx
 	jnz loc_42A3D8
-	mov eax, eax
 
 loc_42A3EC:
 	pop edx
@@ -62897,7 +62883,6 @@ loc_432CF9:
 	mov [esp+0D4h], ah
 	test ebp, ebp
 	jg loc_432CF9
-	mov eax, eax
 
 loc_432D14:
 	mov dl, [esp+0D4h]
@@ -63280,7 +63265,6 @@ loc_433261:
 	mov [esp+0D4h], ah
 	test ebp, ebp
 	jg loc_433261
-	mov eax, eax
 
 loc_43327C:
 	mov dl, [esp+0D4h]
@@ -69530,7 +69514,6 @@ sub_437D10: ;SUBROUTINE
 	mov dword [dword_50A8A4], edx
 	test edx, edx
 	jnz loc_437D7F
-	lea eax, [eax+0]
 
 loc_437D78:
 	pop ebp
@@ -91252,7 +91235,6 @@ loc_446F70:
 	add eax, 0Ah
 	cmp edx, ebx
 	jl loc_446F70
-	lea eax, [eax+0]
 
 loc_446F80:
 	mov dword [dword_511800], ebx
@@ -91655,7 +91637,6 @@ loc_4473AD:
 	mov word [edx+eax+49Ah], 0FFFFh
 	cmp eax, 0C8h
 	jl loc_4473AD
-	lea eax, [eax+0]
 
 loc_4473C4:
 	mov dword [dword_51180C], esi
@@ -99354,7 +99335,6 @@ loc_44CF39:
 	add eax, 4
 	cmp ecx, ebp
 	jg loc_44CF39
-	lea eax, [eax+0]
 
 loc_44CF48:
 	mov dword dword_4D5EA4[ebx*4], edx
@@ -99815,7 +99795,6 @@ loc_44D4A2:
 	add eax, 4
 	cmp ecx, edi
 	jg loc_44D4A2
-	mov eax, eax
 
 loc_44D4B0:
 	mov dword dword_4D5EA4[ebx*4], edx
@@ -102848,7 +102827,6 @@ loc_44F8F9:
 	inc eax
 	cmp edx, ecx
 	jl loc_44F8F9
-	mov eax, eax
 
 loc_44F904:
 	pop ecx
@@ -103148,7 +103126,6 @@ loc_44FC58:
 	mov dword dword_511A84[eax], ecx
 	cmp eax, ebx
 	jl loc_44FC58
-	lea eax, [eax+0]
 
 loc_44FC74:
 	mov ebx, dword [dword_511E3C]
@@ -103166,7 +103143,6 @@ loc_44FC82:
 	add ebx, 4
 	cmp ecx, esi
 	jl loc_44FC82
-	lea eax, [eax+0]
 
 loc_44FCA0:
 	xor edi, edi
@@ -116288,7 +116264,6 @@ loc_459C39:
 	call sub_489B9C
 	cmp dword [dword_5121F4], 0
 	jnz loc_459C39
-	lea eax, [eax+0]
 
 loc_459C4C:
 	mov eax, dword dword_512160[ebx*4]
@@ -144116,7 +144091,6 @@ loc_46ECEA:
 	mov [ecx+edx], di
 	cmp eax, ebx
 	jnz loc_46ECEA
-	mov eax, eax
 
 loc_46ED04:
 	pop edi
@@ -148046,7 +148020,6 @@ loc_471508:
 	add ebx, 10h
 	cmp edx, esi
 	jl loc_471508
-	mov eax, eax
 
 loc_471528:
 	mov edx, [esp+0Ch]
@@ -149713,7 +149686,6 @@ loc_472984:
 	sub ebx, 4
 	test ecx, ecx
 	jge loc_472984
-	lea eax, [eax+0]
 
 loc_472998:
 	pop ecx
@@ -150403,7 +150375,6 @@ loc_4730B8:
 	add edx, 4
 	cmp eax, ecx
 	jl loc_4730B8
-	mov eax, eax
 
 loc_4730D8:
 	mov edx, 16h
@@ -151147,7 +151118,6 @@ loc_47386C:
 	add edx, 200h
 	cmp ebp, esi
 	jl loc_47386C
-	lea eax, [eax+0]
 
 loc_47389C:
 	mov edi, dword [dword_512264]
@@ -151164,7 +151134,6 @@ loc_4738B2:
 	mov byte byte_541F24[edx], ah
 	cmp ebx, ebp
 	jl loc_4738B2
-	lea eax, [eax+0]
 
 loc_4738C8:
 	inc dword [dword_5423A4]
@@ -151238,7 +151207,6 @@ loc_47395B:
 	mov ecx, edx
 	cmp edx, esi
 	jl loc_47395B
-	lea eax, [eax+0]
 
 loc_473998:
 	mov ebp, dword dword_5423A8[ebp]
@@ -163803,7 +163771,6 @@ loc_47C446:
 	jl loc_47C446
 	xor edi, edi
 	mov dword [dword_55E3C4], edi
-	lea eax, [eax+0]
 
 loc_47C46C:
 	mov esi, 5
@@ -167669,7 +167636,6 @@ loc_47F235:
 	mov [eax-1], bl
 	cmp eax, edx
 	jnz loc_47F235
-	mov eax, eax
 
 loc_47F244:
 	mov ebx, [esi+6]
@@ -169807,7 +169773,6 @@ loc_480C24:
 	call sub_483EB0
 	cmp edx, dword [dword_563D54]
 	jnz loc_480C24
-	mov eax, eax
 
 loc_480C3C:
 	pop ebx
@@ -169941,7 +169906,6 @@ loc_480FBF:
 	call sub_483EB0
 	cmp edx, dword [dword_4DAB14]
 	jnz loc_480FBF
-	lea eax, [eax+0]
 
 loc_480FD8:
 	mov eax, dword [dword_563D54]
@@ -172820,7 +172784,6 @@ loc_4838E2:
 	mov ebx, dword [dword_5637CC]
 	test ebx, ebx
 	jnz loc_483933
-	lea eax, [eax+0]
 
 loc_4838F8:
 	pop edx
@@ -172963,7 +172926,6 @@ loc_483B05:
 	mov dword dword_56377C[eax], edx
 	cmp eax, 1Ch
 	jl loc_483B05
-	lea eax, [eax+0]
 
 loc_483B1C:
 	xor eax, eax
@@ -174282,7 +174244,6 @@ loc_484B34:
 
 sub_484B3C: ;SUBROUTINE
 	xor eax, eax
-	mov eax, eax
 	push edx
 	mov edx, eax
 	mov eax, dword [dword_563F00]
@@ -174382,7 +174343,6 @@ loc_484D50:
 	mov eax, ebx
 	cmp edx, ecx
 	jl loc_484D50
-	lea eax, [eax+0]
 
 loc_484D60:
 	mov dword [eax+20h], 0
@@ -175077,7 +175037,6 @@ sub_48549C: ;SUBROUTINE
 loc_4854AE:
 	xor eax, eax
 	pop ecx
-	lea eax, [eax+0]
 	ret
 
 loc_4854B5:
@@ -176198,7 +176157,6 @@ loc_48635A:
 	call sub_4A48C0
 	cmp ecx, edi
 	jl loc_48635A
-	mov eax, eax
 
 loc_48636C:
 	xor eax, eax
@@ -179608,7 +179566,6 @@ loc_488B10:
 sub_488B24: ;SUBROUTINE
 	cmp byte [byte_4DDA74], 0
 	jnz sub_488ADC
-	lea eax, [eax+0]
 	jmp sub_488B30
 ;sub_488B24 endp
 
@@ -179653,7 +179610,6 @@ loc_488B8B:
 	call sub_489B9C
 	cmp dl, byte [byte_4DB66F]
 	jz loc_488B8B
-	mov eax, eax
 
 loc_488B9C:
 	mov eax, dword [dword_4DB670]
@@ -189095,7 +189051,6 @@ loc_48FDA1:
 	call sub_489B9C
 	cmp dword dword_5644E0[edx], 0
 	jnz loc_48FDA1
-	lea eax, [eax+0]
 
 loc_48FDB4:
 	mov eax, esi
@@ -189777,7 +189732,6 @@ loc_4908EC:
 	inc edx
 	test eax, eax
 	jnz loc_4908EC
-	lea eax, [eax+0]
 
 loc_4908FC:
 	mov eax, edx
@@ -191250,7 +191204,6 @@ loc_49315E:
 	add ecx, eax
 	cmp ebp, edx
 	jl loc_49315E
-	mov eax, eax
 
 loc_49319C:
 	xor eax, eax
@@ -192184,7 +192137,6 @@ loc_493E64:
 	mov eax, [eax+70h]
 	cmp dword [eax+70h], 0
 	jnz loc_493E64
-	lea eax, [eax+0]
 
 loc_493E70:
 	mov [eax+70h], ecx
@@ -196464,7 +196416,6 @@ loc_4975C7:
 	mov dword [dword_4DCFF8], edx
 	test edx, edx
 	jnz loc_4975C7
-	mov eax, eax
 	jmp sub_4975E0
 ;sub_4975B0 endp
 
@@ -197299,7 +197250,6 @@ loc_497D93:
 	call grDrawTriangle
 	dec ebp
 	jnz loc_497D93
-	mov eax, eax
 
 loc_497FD8:
 	add esp, 0F0h
@@ -197790,7 +197740,6 @@ loc_499757:
 	mov [esi-2], bx
 	cmp edi, ebp
 	jl loc_49972C
-	mov eax, eax
 
 loc_499768:
 	pop ebp
@@ -197909,7 +197858,6 @@ loc_499808:
 	mov [esi-2], bx
 	cmp edi, ebp
 	jl loc_499808
-	lea eax, [eax+0]
 
 loc_49983C:
 	pop ebp
@@ -198087,7 +198035,6 @@ loc_499958:
 	mov [edx-1], al
 	cmp ebx, edi
 	jl loc_499958
-	mov eax, eax
 
 loc_4999A8:
 	add esp, 0Ch
@@ -198139,7 +198086,6 @@ loc_4999D5:
 	mov [edx-1], bl
 	cmp ecx, esi
 	jl loc_4999D5
-	lea eax, [eax+0]
 
 loc_499A10:
 	add esp, 0Ch
@@ -198406,7 +198352,6 @@ loc_499C0C:
 	mov [edx-4], ebx
 	cmp ecx, esi
 	jl loc_499C0C
-	lea eax, [eax+0]
 
 loc_499C40:
 	add esp, 4
@@ -200154,7 +200099,6 @@ loc_49B1F5:
 	add esi, ecx
 	cmp eax, edi
 	jl loc_49B1F5
-	lea eax, [eax+0]
 
 loc_49B210:
 	mov eax, ebx
@@ -200232,7 +200176,6 @@ loc_49B272:
 	add eax, edx
 	cmp eax, ecx
 	jb loc_49B272
-	mov eax, eax
 
 loc_49B284:
 	mov edx, [eax]
@@ -200553,7 +200496,6 @@ loc_49C478:
 	add ecx, 0Ch
 	dec esi
 	jnz loc_49C478
-	lea eax, [eax+0]
 
 loc_49C4D4:
 	pop edi
@@ -204328,7 +204270,6 @@ loc_4A01E4:
 	mov [edx-4], ebx
 	cmp ecx, esi
 	jl loc_4A01E4
-	lea eax, [eax+0]
 
 loc_4A020C:
 	mov eax, [ebp+42Eh]
@@ -204389,7 +204330,6 @@ loc_4A027E:
 	mov [eax-4], bl
 	cmp ecx, esi
 	jl loc_4A027E
-	mov eax, eax
 
 loc_4A02BC:
 	cmp dword [esp+70h], 0
@@ -211300,7 +211240,6 @@ loc_4A7934:
 	fstp dword [ebx-4]
 	cmp ebx, ecx
 	jb loc_4A7934
-	lea eax, [eax+0]
 
 loc_4A7954:
 	add esp, 4
@@ -212653,7 +212592,6 @@ loc_4A8846:
 	call sub_489840
 	cmp ecx, edx
 	jl loc_4A8846
-	lea eax, [eax+0]
 
 loc_4A885C:
 	mov eax, [esp+170h]
@@ -213760,7 +213698,6 @@ loc_4A9720:
 	add ebx, ecx
 	dec edi
 	jnz loc_4A9720
-	lea eax, [eax+0]
 
 loc_4A9774:
 	add esp, 0Ch
@@ -218266,7 +218203,6 @@ loc_4B2A9D:
 	mov byte [edx+ebx], 0FFh
 	cmp eax, ebp
 	jl loc_4B2A9D
-	lea eax, [eax+0]
 
 loc_4B2AD4:
 	mov dword [dword_5B9448], ecx
@@ -224916,7 +224852,6 @@ loc_4BC58A:
 	mov [ebx+0Ch], ecx
 	cmp eax, esi
 	jl loc_4BC58A
-	lea eax, [eax+0]
 
 loc_4BC5A8:
 	mov esi, ebx
@@ -225001,7 +224936,6 @@ loc_4BC646:
 	mov [ebx+0Ch], ebp
 	test esi, esi
 	jg loc_4BC646
-	mov eax, eax
 
 loc_4BC65C:
 	xor eax, eax
@@ -225098,7 +225032,6 @@ loc_4BC713:
 	mov [edx-2], bx
 	cmp eax, edi
 	jl loc_4BC713
-	lea eax, [eax+0]
 
 loc_4BC728:
 	cmp eax, ebp
@@ -225368,7 +225301,6 @@ loc_4BC997:
 	mov [esi+0Ch], edi
 	cmp ebx, ebp
 	jl loc_4BC997
-	mov eax, eax
 
 loc_4BC9B4:
 	mov eax, esi
@@ -225800,7 +225732,6 @@ loc_4BCDEF:
 	mov [ebx+10h], ebp
 	cmp edx, esi
 	jl loc_4BCDEF
-	mov eax, eax
 
 loc_4BCE0C:
 	xor eax, eax
@@ -225897,7 +225828,6 @@ loc_4BCEC6:
 	mov [ebx+10h], edi
 	test esi, esi
 	jg loc_4BCEC6
-	mov eax, eax
 
 loc_4BCEDC:
 	xor eax, eax
@@ -226033,7 +225963,6 @@ loc_4BCFF1:
 	mov [ecx-2], si
 	cmp eax, ebp
 	jl loc_4BCFF1
-	mov eax, eax
 
 loc_4BD00C:
 	mov eax, [esp]
@@ -226306,7 +226235,6 @@ loc_4BD2A4:
 	mov [esi+10h], edi
 	cmp ebx, ebp
 	jl loc_4BD2A4
-	mov eax, eax
 
 loc_4BD2CC:
 	mov eax, esi
@@ -226388,7 +226316,6 @@ loc_4BD33F:
 	lea ecx, 0[eax*4]
 	xor edx, edx
 	mov eax, ecx
-	lea eax, [eax+0]
 	test ecx, ecx
 
 loc_4BD398:
@@ -226733,7 +226660,6 @@ loc_4BD71C:
 	add edx, 4
 	cmp eax, edi
 	jl loc_4BD71C
-	lea eax, [eax+0]
 
 loc_4BD734:
 	xor eax, eax
@@ -227191,7 +227117,6 @@ loc_4BDB10:
 	add edx, 4
 	cmp eax, edi
 	jl loc_4BDB10
-	lea eax, [eax+0]
 
 loc_4BDB28:
 	xor eax, eax
@@ -227618,7 +227543,6 @@ loc_4BDF44:
 	add esi, 4
 	cmp edx, edi
 	jl loc_4BDF44
-	lea eax, [eax+0]
 
 loc_4BDF5C:
 	xor eax, eax
@@ -227715,7 +227639,6 @@ loc_4BE006:
 	mov [ebx+18h], ebp
 	test esi, esi
 	jg loc_4BE006
-	lea eax, [eax+0]
 
 loc_4BE020:
 	xor eax, eax
@@ -227830,7 +227753,6 @@ loc_4BE100:
 	mov [edx-4], ebx
 	cmp eax, edi
 	jl loc_4BE100
-	lea eax, [eax+0]
 
 loc_4BE11C:
 	cmp eax, esi
@@ -227849,7 +227771,6 @@ loc_4BE12C:
 	fstp dword [ecx-4]
 	cmp eax, esi
 	jl loc_4BE12C
-	lea eax, [eax+0]
 
 loc_4BE144:
 	mov eax, edi
@@ -227909,7 +227830,6 @@ loc_4BE1BF:
 loc_4BE1C3:
 	lea eax, 0[edi*8]
 	add [esi+18h], eax
-	lea eax, [eax+0]
 
 loc_4BE1D0:
 	test edi, edi
@@ -228114,7 +228034,6 @@ loc_4BE3D7:
 	mov [esi+18h], edi
 	cmp ebx, ebp
 	jl loc_4BE3D7
-	lea eax, [eax+0]
 
 loc_4BE3FC:
 	mov eax, esi
@@ -228830,7 +228749,6 @@ loc_4BEB71:
 	fstp dword [edx-4]
 	cmp eax, ebx
 	jl loc_4BEB71
-	lea eax, [eax+0]
 
 loc_4BEB84:
 	pop ecx
@@ -232021,7 +231939,7 @@ dword_4C4EA0: dd 18h, 10h, 1, 50h, 2Ch
 
 section .data
 
-binaryGameVersion: db '1.1.1',0
+binaryGameVersion: db '1.1.2',0
 
 aDbar: db 'dbar',0
 aDlog: db 'dlog',0
