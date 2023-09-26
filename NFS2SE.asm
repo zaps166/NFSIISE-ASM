@@ -42015,8 +42015,7 @@ loc_421DE3:
 	mov cl, bl
 	mov edi, 1
 	mov edx, dword dword_4E7388[eax]
-	shl edi, cl
-	or edx, edi
+	inc edx
 	mov dword dword_4E7388[eax], edx
 	test ebp, ebp
 	jz loc_421E2C
