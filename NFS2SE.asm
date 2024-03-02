@@ -42012,8 +42012,6 @@ loc_421DE3:
 	test eax, eax
 	jnz loc_421E33
 	imul eax, edi, 5Ch
-	mov cl, bl
-	mov edi, 1
 	mov edx, dword dword_4E7388[eax]
 	inc edx
 	mov dword dword_4E7388[eax], edx
