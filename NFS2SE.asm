@@ -26125,6 +26125,11 @@ loc_414B88:
 
 dword_414BD0: dd 0Dh
 	times 2 dd 4Ch
+	times 3 dd 0Ch
+	dd 0Bh
+	times 2 dd 36h
+	times 2 dd 0Eh
+	dd 47h
 off_414C00: dd aMac_2
 	dd aFerr_0 ; "ferr"
 	dd aFerr_0 ; "ferr"
@@ -231936,7 +231941,7 @@ dword_4C4EA0: dd 18h, 10h, 1, 50h, 2Ch
 
 section .data
 
-binaryGameVersion: db '1.1.3',0
+binaryGameVersion: db '1.1.4',0
 
 aDbar: db 'dbar',0
 aDlog: db 'dlog',0
