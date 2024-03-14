@@ -10,8 +10,10 @@ global dword_5637D8
 global dword_4DB1B0
 global dword_4DDA70
 global dword_5637A0
+global dword_557540
 global mousePositionX
 global mousePositionY
+global inControlAssignMode
 
 extern SDL_NumJoysticks_wrap
 extern SDL_GetTicks_wrap
@@ -76,6 +78,7 @@ extern WrapperCreateWindow
 extern fetchTrackRecords
 extern WrapperAtExit
 extern WrapperInit
+extern processAxes
 extern startTimer
 extern stopTimer
 
@@ -20782,7 +20785,9 @@ loc_4108ED:
 loc_4108F7:
 	mov edx, ecx
 	mov eax, esi
+	mov byte [inControlAssignMode], 1
 	call sub_403FC0
+	mov byte [inControlAssignMode], 0
 	test eax, eax
 	jnz loc_4108F7
 	mov eax, ebx
@@ -156862,83 +156867,7 @@ sub_477850: ;SUBROUTINE
 	push ebx
 	push ecx
 	push edx
-	mov ecx, eax
-	mov edx, eax
-	shr edx, 14h
-	shr eax, 10h
-	shl edx, 6
-	and eax, 7
-	mov eax, dword dword_557540[edx+eax*4]
-	mov edx, ecx
-	and ecx, 0FFh
-	and edx, 0FF00h
-	shl ecx, 8
-	cmp edx, ecx
-	jge loc_4778B3
-	cmp eax, edx
-	jl loc_477890
-	cmp eax, ecx
-	jle loc_477896
-
-loc_477887:
-	mov eax, 0FFh
-	pop edx
-	pop ecx
-	pop ebx
-	ret
-
-loc_477890:
-	xor eax, eax
-	pop edx
-	pop ecx
-	pop ebx
-	ret
-
-loc_477896:
-	sub eax, edx
-	mov ebx, eax
-	shl eax, 4
-	add eax, ebx
-	mov ebx, eax
-	shl eax, 4
-	sub eax, ebx
-	sub ecx, edx
-	mov edx, eax
-	sar edx, 1Fh
-	idiv ecx
-	pop edx
-	pop ecx
-	pop ebx
-	ret
-
-loc_4778B3:
-	jle loc_4778BD
-	cmp eax, ecx
-	jl loc_477887
-	cmp eax, edx
-	jle loc_4778C3
-
-loc_4778BD:
-	xor eax, eax
-	pop edx
-	pop ecx
-	pop ebx
-	ret
-
-loc_4778C3:
-	mov ebx, edx
-	sub ebx, eax
-	mov eax, ebx
-	shl eax, 4
-	add eax, ebx
-	mov ebx, eax
-	shl eax, 4
-	sub edx, ecx
-	sub eax, ebx
-	mov ecx, edx
-	mov edx, eax
-	sar edx, 1Fh
-	idiv ecx
+	call processAxes
 	pop edx
 	pop ecx
 	pop ebx
@@ -231941,7 +231870,7 @@ dword_4C4EA0: dd 18h, 10h, 1, 50h, 2Ch
 
 section .data
 
-binaryGameVersion: db '1.1.4',0
+binaryGameVersion: db '1.1.5',0
 
 aDbar: db 'dbar',0
 aDlog: db 'dlog',0
@@ -238576,6 +238505,7 @@ dword_4E2AEC: dd 2000h
 	dd 2AA1h, 2D41h, 3249h, 3B21h, 4B42h, 6D41h, 0D650h, 73FCh
 	dd 539Fh, 58C5h, 62A3h, 73FCh, 939Fh, 0D650h, 1A463h, 0
 timerIsRunning: dd 0
+inControlAssignMode: db 0
 %ifdef SWAP_WINDOW_AND_GL_THREAD
 canRunWindowThread: db 0
 %endif
