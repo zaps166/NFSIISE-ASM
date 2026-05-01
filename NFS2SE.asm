@@ -90898,8 +90898,8 @@ loc_446AFF:
 ;sub_446AA0 endp
 
 off_446B10: dd loc_446B8C
-	dd loc_446BFD ; jump table for switch statement
-	dd loc_446BFD
+	dd loc_446B8C ; jump table for switch statement
+	dd loc_446B8C
 	dd loc_446C6E
 
 sub_446B20: ;SUBROUTINE
@@ -90948,24 +90948,6 @@ loc_446BEC:
 	pop esi
 	ret
 
-loc_446BFD:
-	mov dword [eax+0A4h], 1900000h ; jumptable 00446B85 cases 1,2
-	mov dword [eax+0A8h], 1B80000h
-	mov dword [eax+0ACh], 3C0000h
-	mov dword [eax+0B0h], 5C0000h
-	mov dword [eax+0B4h], 2BCh
-	mov dword [eax+0B8h], 18h
-	mov edx, [eax+98h]
-	mov dword [eax+0A0h], 0FFFB0000h
-	mov dword [edx+1Ch], 380h
-	mov eax, [eax+98h]
-	mov dword [eax+20h], 1
-	mov eax, dword [dword_50DF9C]
-	lea edx, [eax+1]
-	mov dword [dword_50DF9C], edx
-	pop edi
-	pop esi
-	ret
 
 loc_446C6E:
 	mov dword [eax+0A4h], 960000h ; jumptable 00446B85 case 3
@@ -231870,7 +231852,7 @@ dword_4C4EA0: dd 18h, 10h, 1, 50h, 2Ch
 
 section .data
 
-binaryGameVersion: db '1.1.5',0
+binaryGameVersion: db '1.1.6',0
 
 aDbar: db 'dbar',0
 aDlog: db 'dlog',0
